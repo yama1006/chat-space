@@ -8,40 +8,49 @@
   background-color: $side_blue_dark;
   width: 300px;
   height: 100px;
+  &__box{
+    width: 260px;
+    height: 18px;
+    padding: 41px 20px;
+    &__user-name{
+      font-size: 16px;
+      float: left;
+      position: relative;
+    }
+    &__menu{
+      float: right;
+      position: relative;
+      &__new-group{
+        float: left;
+        .fa{
+          color: $white;
+        }
+      }
+      &__edit-user{
+        float: right;
+        margin-left: 8px;
+        .fa{
+          color: $white;
+        }
+      }
+    }
+  }
 }
 .groups{
   background-color: $side_blue_light;
   width: 300px;
   height: calc(100vh - 100px);
-}
-.side-header_box{
-  width: 260px;
-  height: 18px;
-  padding: 41px 20px;
-  .side-header__box__user-name{
-    font-size: 16px;
-    float: left;
-    position: relative;
-  }
-  ul{
-    float: right;
-    position: relative;
-    li{
-      display: inline;
+  &__list{
+    width: 260px;
+    height: 45px;
+    margin: auto 20px;
+    padding: 0 0 40px;
+    &__group-name{
+      font-size: 15px;
+      padding: 20px 0 5px; 
+    }
+    &__latest-message{
+      font-size: 11px;
     }
   }
-}
-
-.group{
-  width: 260px;
-  height: 45px;
-  margin: auto 20px;
-  padding: 0 0 40px;
-}
-.group__group-name{
-  font-size: 15px;
-  padding: 20px 0 5px; 
-}
-.group__group-latest-message{
-  font-size: 11px;
 }
