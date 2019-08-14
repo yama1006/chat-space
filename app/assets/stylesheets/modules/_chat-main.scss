@@ -1,0 +1,106 @@
+.chat-main{
+  float: right;
+  position: relative;
+  width: calc(100vw - 300px);
+}
+.main-header{
+  background-color: $white;
+  height: 100px;
+  border-bottom: 1px solid #eeeeee;
+  &__left-box{
+    float: left;
+    position: relative;
+    padding-left: 40px;
+    &__current-group{
+      color: $light_black;
+      font-size: 20px;
+      padding: 35px 0 15px;
+    }
+    &__member-list{
+      display: inline;
+      color: $light_gray;
+      font-size: 12px;
+      &__members{
+        display: inline-block;
+        width: 30px;
+        font-size: 12px;
+      }
+    }
+  }
+  &__edit-btn{
+    float: right;
+    position: relative;
+    height: 40px;
+    width: 70px;
+    border: solid;
+    border-color: $light_blue;
+    color: $light_blue;
+    text-align: center;
+    line-height: 40px;
+    margin: 28px 40px auto;
+  }
+}
+.messages{
+  background-color: $light_background;
+  height: calc(100vh - 100px - 90px);
+  .message{
+    &__upper-info{
+      &__talker{
+        display: inline-block;
+        font-size: 20px;
+        margin: 46px 10px 0px 40px;
+              }
+      &__date{
+        display: inline-block;
+        font-size: 12px;
+        color: $light_gray;
+      }
+    }
+    &__text{
+      margin: 10px 40px 40px;
+    }
+  }
+}
+.form{
+  background-color: #ccc;
+  width: calc(100vw - 300px);
+  height: 90px;
+  &__new-message{
+    &__input-box{
+      float: left;
+      position: relative;
+      height: 50px;
+      width: calc(100vw - 500px);
+      margin: 20px 40px 0px 20px;
+      &__text{
+        display: inline-block;
+        height: 50px;
+        width: calc(100vw - 500px);
+      }
+      &__image{    
+        display: inline-block; 
+        position: absolute;
+        left: calc(100vw - 520px);
+        bottom: 10px;
+        margin-right:10px;
+        &__file{
+          display: none;
+        }
+      }
+    } 
+    &__send-box{
+      float: right;
+      background-color: $light_blue;
+      height: 50px;
+      width: 100px;
+      margin-top: 20px;
+      margin-right: 40px;
+      &__message{
+        text-align: center;
+        color: $white;
+        font-size: 20px;
+        line-height: 50px;
+      }
+    } 
+  }
+}
