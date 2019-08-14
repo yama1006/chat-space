@@ -51,9 +51,12 @@
     .message__upper-info__talker{
       padding-top: 46px;
       display: inline-block;
+      font-size: 20px
     }
     .message__upper-info__date{
       display: inline;
+      font-size: 12px;
+      color: $light_gray;
     }
   }
   p.message__text{
@@ -67,20 +70,21 @@
   .new_message{
     .input-box{
       float: left;
-      background-color: $white;
+      // background-color: $white;
       height: 50px;
       width: calc(100vw - 500px);
       margin: 20px 40px 0px 20px;
-      p.type_message{
-        display: inline;
-        font-size: 16px;
-        color: $black;
-        line-height: 50px;
-        margin-left: 10px;
-      }
-      label.photo{
+      .message__text{
         display: inline-block;
+        height: 50px;
+        width: calc(100vw - 500px);
+      }
+      .photo{     
         margin-right:10px;
+        display: block;
+        #message_image.input-box__image__file{
+          display: none;
+        }
       }
     } 
     .send-box{

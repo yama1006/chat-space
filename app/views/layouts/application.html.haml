@@ -18,9 +18,11 @@
               test-user
             %ul.side-header__box__menu
               %li.side-header__box__menu__new-group
-                = fa_icon("edit") 
+                %a{:href => "http://localhost:3000/messages"}
+                  = fa_icon("edit")
               %li.side-header__box__menu__edit-user
-                = fa_icon("cog ")
+                %a{:href => "http://localhost:3000/messages"}
+                  = fa_icon("cog ")
         .groups
           .group
             %p.group__group-name
@@ -60,10 +62,10 @@
         .form 
           %form.new_message
             .input-box
-              %p.type_message
-                type a message
+              %input.message__text{:type => "text" , :placeholder => "   type a message"}          
               %label.photo
                 = fa_icon("image")
+                %input#message_image.input-box__image__file{ :type => "file"}/                
             .send-box
               %p.send_message
                 Send
