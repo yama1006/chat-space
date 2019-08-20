@@ -47,8 +47,9 @@
     &__upper-info{
       &__talker{
         display: inline-block;
-        font-size: 20px;
-        margin: 46px 10px 0px 40px;
+        font-size: 12px;
+        margin: 46px 10px 0px 10px;
+        margin-left: 40px;
               }
       &__date{
         display: inline-block;
@@ -57,7 +58,7 @@
       }
     }
     &__text{
-      margin: 10px 40px 40px;
+      margin: 10px 40px 0px;
     }
   }
 }
