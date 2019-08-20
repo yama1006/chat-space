@@ -48,9 +48,13 @@
     &__group-name{
       font-size: 15px;
       padding: 20px 0 5px; 
+      color: $white;
+      text-decoration: none;
     }
     &__latest-message{
       font-size: 11px;
+      color: $white;
+      text-decoration: none;
     }
   }
 }

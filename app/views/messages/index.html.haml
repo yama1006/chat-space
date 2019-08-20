@@ -1,1 +1,23 @@
-
+= render partial: "shared/side_bar"
+.chat-main
+  .main-header
+    .main-header__left-box
+      .main-header__left-box__current-group 
+        = @group.name
+      .main-header__left-box__member-list
+        .main-header__left-box__member-list__members
+          メンバー
+    .main-header__edit-btn
+      edit
+  .messages
+    .message
+      = render partial: 'message', collection: @messages
+  .form
+    .form__new-message
+      .form__new-message__input-box
+        = form_for [@group, @message] do |f|
+          = f.text_field :content, class: 'form__new-message__input-box__text', placeholder: 'type a message'
+          = f.label :image, class: 'form__new-message__input-box__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'form__new-message__input-box__image__file'         
+          = f.submit 'Send', class: 'form__new-message__send-box__message'

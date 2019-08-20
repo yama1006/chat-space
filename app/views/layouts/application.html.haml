@@ -7,67 +7,30 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    .flash-box 
-      .notice
-        グループを作成しました。
-    .wrapper
-      .chat-side
-        .side-header
-          .side-header__box
-            %p.side-header__box__user-name
-              test-user
-            %ul.side-header__box__menu
-              %li.side-header__box__menu__new-group
-                = link_to "http://localhost:3000/messages" do
-                  %i.fa.fa-edit
-              %li.side-header__box__menu__edit-user
-                = link_to "http://localhost:3000/messages" do
-                  %i.fa.fa-cog
-        .groups
-          .groups__list
-            %p.groups__list__group-name
-              test-group
-            %p.groups__list__latest-message
-              さようなら
-          .groups__list
-            %p.groups__list__group-name
-              sample-group
-            %p.groups__list__latest-message
-              hello!
-          .groups__list
-            %p.groups__list__group-name
-              example
-            %p.groups__list__latest-message
-              まだメッセージがありません
-      .chat-main
-        .main-header  
-          .main-header__left-box
-            %h2.main-header__left-box__current-group
-              test-group
-            %ul.main-header__left-box__member-list
-              %li.main-header__left-box__member-list__member
-                Member : 
-                test-user
-          .main-header__edit-btn
-            Edit
-        .messages
-          .message
-            .message__upper-info
-              %p.message__upper-info__talker
-                test-user
-              %p.message__upper-info__date
-                2019/8/11(Sun) 14:32:23
-            %p.message__text
-              こんにちは！
-        .form 
-          %form.form__new-message
-            .form__new-message__input-box
-              %input.form__new-message__input-box__text{:type => "text" , :placeholder => "   type a message"}          
-              %label.form__new-message__input-box__image
-                %i.fa.fa-image
-                %input#message_image.form__new-message__input-box__image__file{ :type => "file"}/                
-            .form__new-message__send-box
-              %p.form__new-message__send-box__message
-                Send
     = render 'layouts/notifications'
+    -# .flash-box 
+    -#   .notice
+    -#     グループを作成しました。
+    -# .wrapper
+    -#   .chat-main
+    -#     .main-header  
+    -#       .main-header__left-box
+    -#         %h2.main-header__left-box__current-group
+    -#           test-group
+    -#         %ul.main-header__left-box__member-list
+    -#           %li.main-header__left-box__member-list__member
+    -#             Member : 
+    -#             test-user
+    -#       .main-header__edit-btn
+    -#         Edit
+    -#     .messages
+    -#       .message
+    -#         .message__upper-info
+    -#           %p.message__upper-info__talker
+    -#             test-user
+    -#           %p.message__upper-info__date
+    -#             2019/8/11(Sun) 14:32:23
+    -#         %p.message__text
+    -#           こんにちは！
+    
     = yield

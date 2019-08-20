@@ -89,13 +89,13 @@
       }
     } 
     &__send-box{
-      float: right;
-      background-color: $light_blue;
-      height: 50px;
-      width: 100px;
-      margin-top: 20px;
-      margin-right: 40px;
       &__message{
+        position: absolute;
+        background-color: $light_blue;
+        height: 50px;
+        width: 100px;
+        top: 0;
+        right: -140px;
         text-align: center;
         color: $white;
         font-size: 20px;
